@@ -5,9 +5,8 @@ from flask_cors import CORS
 import json
 
 app = Flask(__name__)
-CORS(app)
 
-app.run(debug=True)
+CORS(app)
 
 # Define a new client.
 client = pymongo.MongoClient(
@@ -41,17 +40,16 @@ def data():
 
 @app.route('/', methods=['POST'])
 def add_articles():
-    name = request.json
+		name = request.json
 
-    print(str(name))
+		print(str(name))
     #db.session.add(article)
-    #db.session.commit()
-    mycol.insert_one(name)
+		#db.session.commit()
+		mycol.insert_one(name)
+	
+		getDB()
+		return data()
 
-    getDB()
-    data()
-    return
     #jsonify(article)
 
-
-app.run(host='0.0.0.0', port=81)
+app.run(debug=True, use_reloader=True ,host='0.0.0.0', port=8080)
