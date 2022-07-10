@@ -52,4 +52,9 @@ def add_articles():
 
     #jsonify(article)
 
+@app.route("/vote", methods=["POST"])
+def vote():
+	req = request.json
+	print(req)
+
 app.run(debug=True, use_reloader=True ,host='0.0.0.0', port=8080)
