@@ -46,15 +46,21 @@ def add_articles():
     #db.session.add(article)
 		#db.session.commit()
 		mycol.insert_one(name)
-	
+	#
 		getDB()
 		return data()
 
     #jsonify(article)
 
+@app.route("/vote")
+def vote_Screen():
+	return "hi"
+
+	
 @app.route("/vote", methods=["POST"])
 def vote():
-	req = request.json
-	print(req)
+	print(str(request.json))
 
+	
+	return ''
 app.run(debug=True, use_reloader=True ,host='0.0.0.0', port=8080)
