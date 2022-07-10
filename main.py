@@ -3,6 +3,7 @@ import pymongo
 import secret
 from flask_cors import CORS
 import json
+import ast
 
 app = Flask(__name__)
 
@@ -59,7 +60,20 @@ def vote_Screen():
 	
 @app.route("/vote", methods=["POST"])
 def vote():
-	print(str(request.json))
+	
+	name_val = (request.json)
+	a = (str(name_val))
+		 
+	n = a.replace(a[10] , '')
+	print(n)
+
+
+	y = ast.literal_eval(n)
+	x = mycol.find_one(y,{'votes'})
+	
+	print(x)
+
+
 
 	
 	return ''
