@@ -69,11 +69,12 @@ def vote():
 
 
 	y = ast.literal_eval(n)
-	x = mycol.find_one(y,{'votes'})
+	x = mycol.find_one(y,{'_id':0,'votes':1})
 	
-	print(x)
-
-
+	oldV = int(x['votes'])
+	newV = oldV + 1
+	print(newV)
+	mycol.update_one(y,  {"$set" : {"votes" : str(newV)}})
 
 	
 	return ''
