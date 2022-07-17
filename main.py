@@ -64,11 +64,11 @@ def vote():
 	name_val = (request.json)
 	a = (str(name_val))
 		 
-	n = a.replace(a[10] , '')
-	print(n)
+	#n = a.replace(a[10] , '')
+	print(a)
 
 
-	y = ast.literal_eval(n)
+	y = ast.literal_eval(a)
 	x = mycol.find_one(y,{'_id':0,'votes':1})
 	
 	oldV = int(x['votes'])
