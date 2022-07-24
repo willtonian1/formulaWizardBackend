@@ -80,7 +80,9 @@ def board():
 				j = { "name": names_list[item][0] , "votes" : names_list[item][1] }
 				final_j_string = final_j_string + (str(j))
 
-		final_j_string
+		final_j_string = '[' + final_j_string
+		final_j_string = final_j_string + ']'
+
 		return final_j_string
 
 
