@@ -57,6 +57,20 @@ def add_articles():
 def vote_Screen():
 	return "hi"
 
+@app.route("/leaderboard")
+def board():
+
+		docs = list(mycol.find())
+		for doc in docs:
+
+			
+			names_list = int(doc['name'])
+	  	
+		return 'hi'
+
+
+
+
 	
 @app.route("/vote", methods=["POST"])
 def vote():
@@ -79,3 +93,5 @@ def vote():
 	
 	return ''
 app.run(debug=True, use_reloader=True ,host='0.0.0.0', port=8080)
+
+	
