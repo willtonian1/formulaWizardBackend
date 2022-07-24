@@ -59,14 +59,29 @@ def vote_Screen():
 
 @app.route("/leaderboard")
 def board():
-
+		names_list = []
 		docs = list(mycol.find())
 		for doc in docs:
 
+				a = str(doc['name'])
+				b = int(doc['votes'])
 			
-			names_list = int(doc['name'])
-	  	
-		return 'hi'
+				names_list.append([a,b])
+
+		for i in range(len(names_list)):
+        # We want the last pair of adjacent elements to be (n-2, n-1)
+				for j in range(len(names_list) - 1):
+						if names_list[j][1] > names_list[j+1][1]:
+            # Swap
+									names_list[j], names_list[j+1] = names_list[j+1], names_list[j]
+
+		final_j_string = ''
+		for item in range(len(names_list)):
+				j = { "name": names_list[item][0] , "votes" : names_list[item][1] }
+				final_j_string = final_j_string + (str(j))
+
+		final_j_string
+		return final_j_string
 
 
 
