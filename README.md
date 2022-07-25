@@ -5,4 +5,5 @@ Backend for my F1 picks website. Users are able to choose their favourite formul
 *Frontend Of Application also available on my GitHub*
 
 ## Frameworks and Languages
-*Flask, Python, Replit Hosting*
+*Flask, Python, Replit Hosting, MongoDB NoSQL database*
+
