@@ -1,13 +1,13 @@
 from flask import Flask, request, jsonify
 import pymongo
 import secret
-from flask_cors import CORS
+#from flask_cors import CORS
 import json
 import ast
 
 app = Flask(__name__)
 
-CORS(app)
+#CORS(app)
 
 # Define a new client.
 client = pymongo.MongoClient(
@@ -17,7 +17,7 @@ client = pymongo.MongoClient(
 db = client.test
 
 mydb = client["wizard"]
-print(str(mydb))
+#print(str(mydb))
 mycol = mydb["cars"]
 
 
