@@ -10,3 +10,4 @@ Backend for my F1 picks website. Users are able to choose their favourite formul
 
 Current Goal: Deploy to Zeet using Dockerfile - Using GCP
 
+Status: FAILED
