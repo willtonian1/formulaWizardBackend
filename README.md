@@ -7,3 +7,7 @@ Backend for my F1 picks website. Users are able to choose their favourite formul
 ## Frameworks and Languages
 *Flask, Python, Replit Hosting, MongoDB NoSQL database*
 
+
+Current Goal: Deploy to Zeet using Dockerfile - Using GCP
+
+Status: FAILED
