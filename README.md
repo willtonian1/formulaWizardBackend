@@ -1,5 +1,5 @@
-# Formula Wizard Backend
-Backend for my FormulaWizard website. Users are able to choose their favourite formula1 liveries and votes are updated live.
+# F1 Draft Backend
+Backend for my F1Draft website. Users are able to choose their favourite formula1 liveries and votes are updated live.
 
 *Frontend Of Application also available on my GitHub*
 
