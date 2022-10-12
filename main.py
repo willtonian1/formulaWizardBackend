@@ -21,7 +21,7 @@ mydb = client["wizard"]
 mycol = mydb["cars"]
 
 
-def getDB():
+def getDB():    #getting array of all documents in the database
 
     list = []
 
@@ -39,7 +39,7 @@ def data():
     return getDB()
 
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['POST'])    #adding documents to mongodb
 def add_articles():
     name = request.json
 
@@ -59,7 +59,7 @@ def vote_Screen():
     return "hi"
 
 
-@app.route("/leaderboard")
+@app.route("/leaderboard")   #getting the array for the necessary documents in the leaderboard 
 def board():
     names_list = []
     docs = list(mycol.find())
@@ -89,7 +89,7 @@ def board():
     return final_j_string
 
 
-@app.route("/vote", methods=["POST"])
+@app.route("/vote", methods=["POST"])   #adding 1 to votes and updating the mongodb
 def vote():
 
     name_val = (request.json)
