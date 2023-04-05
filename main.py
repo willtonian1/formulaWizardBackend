@@ -4,6 +4,9 @@ import secret
 from flask_cors import CORS
 import json
 import ast
+#import os
+
+#os.environ[""]
 
 app = Flask(__name__)
 
